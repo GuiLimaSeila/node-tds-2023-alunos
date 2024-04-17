@@ -11,7 +11,7 @@ export default class UsersRepository {
 
       return allUsers;
     } catch (error) {
-      console.error("Error on getUsers: ", error);
+      // console.error("Error on getUsers: ", error);
       throw error;
     }
   }
@@ -24,7 +24,7 @@ export default class UsersRepository {
 
       return user;
     } catch (error) {
-      console.error("Error on getUserById: ", error);
+      // console.error("Error on getUserById: ", error);
       throw error;
     }
   }
@@ -37,7 +37,7 @@ export default class UsersRepository {
 
       return user;
     } catch (error) {
-      console.error("Error on getUserByEmail: ", error);
+      // console.error("Error on getUserByEmail: ", error);
       throw error;
     }
   }
@@ -49,7 +49,7 @@ export default class UsersRepository {
         [user.id, user.name, user.email, user.password]
       );
     } catch (error) {
-      console.error("Error on createUser: ", error);
+      // console.error("Error on createUser: ", error);
       throw error;
     }
   }
@@ -63,7 +63,7 @@ export default class UsersRepository {
 
       return updateUser;
     } catch (error) {
-      console.error("Error on updateUser: ", error);
+      // console.error("Error on updateUser: ", error);
       throw error;
     }
   }
@@ -72,7 +72,7 @@ export default class UsersRepository {
     try {
       await this.db.none("DELETE FROM users WHERE id = $1", id);
     } catch (error) {
-      console.error("Error on deleteUser: ", error);
+      // console.error("Error on deleteUser: ", error);
       throw error;
     }
   }
