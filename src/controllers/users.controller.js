@@ -75,7 +75,7 @@ export const deleteUser = async (req, res) => {
     return res.status(404).send({ message: "Usuário não encontrado" });
   }
 
-  usersRepository.deleteUser(id);
+  await usersRepository.deleteUser(id);
 
   return res
     .status(200)
